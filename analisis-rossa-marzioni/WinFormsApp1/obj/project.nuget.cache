@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "A9+Ja71ErFghVsdnT1UrXtISzjd4TWSwsZTqVPTPAPvwHFPgV+MSJ0XZfrs/AkxIwaOyu7iOvpGUKk5dtevBxQ==",
+  "dgSpecHash": "hnaBkawAviK2ubUr2ks6ZYgWAwpkw9ENkpful47iaUNmugYfFs2dC9RJ/7I74EypR7id8WiyOuPYPk62DbaCgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Users\\emarzioni.VIMARX\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Emiliano\\.nuget\\packages\\mathparser.org-mxparser\\4.4.2\\mathparser.org-mxparser.4.4.2.nupkg.sha512"
+    "C:\\Users\\emarzioni.VIMARX\\.nuget\\packages\\mathparser.org-mxparser\\4.4.2\\mathparser.org-mxparser.4.4.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -16,11 +16,11 @@ namespace WinFormsApp1
             //Valido si xi o xd es raiz
             Expression exi = new Expression($"f({xi.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
             var fxir = exi.calculate();
-            if(fxir == 0)
+            if(Math.Abs(fxir) < tole )
                 return new Result() { ErrorRelativo = "0", XR = xi.ToString(), Iteraciones = "0" };
             Expression exd = new Expression($"f({xd.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
             var fxdr = exd.calculate();
-            if(fxdr == 0)
+            if(Math.Abs(fxdr) < tole)
                 return new Result() { ErrorRelativo = "0", XR = xd.ToString(), Iteraciones = "0" };
             
             if((fxir * fxdr) >0)
@@ -33,7 +33,6 @@ namespace WinFormsApp1
                 double xr;
                 while (c <= ite)
                 {
-                    c += 1;
                     xr = (xi + xd) / 2;
                     error = Math.Abs((xr - xant) / xr);
                     Expression exr = new Expression($"f({xr.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
@@ -55,6 +54,8 @@ namespace WinFormsApp1
                             xd = xr;
                         }
                         xant = xr;
+                        c += 1;
+
                     }
                 }
                 return new Error() { error_msg = "Se llego al limite de iteraciones" };
@@ -79,7 +80,7 @@ namespace WinFormsApp1
                 return new Result() { ErrorRelativo = "0", XR = xd.ToString(), Iteraciones = "0" };
 
             if ((fxir * fxdr) > 0)
-                return new Error() { error_msg = "Reingrese el intervalo" };
+                return new Error() { error_msg = "Reingrese el intervalo, no corta el eje x" };
             else
             {
                 double xant = 0;
@@ -88,7 +89,6 @@ namespace WinFormsApp1
                 double xr;
                 while (c <= ite)
                 {
-                    c += 1;
                     xr = ((fxdr *  xi)- (fxir * xd)) / (fxdr - fxir);
                     error = Math.Abs((xr - xant) / xr);
                     Expression exr = new Expression($"f({xr.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
@@ -112,6 +112,8 @@ namespace WinFormsApp1
                             fxdr = exd.calculate();
                         }
                         xant = xr;
+                        c += 1;
+
                     }
                 }
                 return new Error() { error_msg = "Se llego al limite de iteraciones" };
@@ -136,7 +138,6 @@ namespace WinFormsApp1
                 double xr;
                 while (c <= ite)
                 {
-                    c += 1;
                     exi = new Expression($"f({xi.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
                     fxir = exi.calculate();
                     exd = new Expression($"f({(xi + tole).ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
@@ -144,7 +145,11 @@ namespace WinFormsApp1
                     xr = xi - (fxir / ((fxdr - fxir)/tole));
                     if (double.IsInfinity(xr))
                     {
-                        return new Error() { error_msg = "Infinito" };
+                        return new Error() { error_msg = "Diverge: Infinito" };
+                    }
+                    if (double.IsNaN(xr))
+                    {
+                        return new Error() { error_msg = "Diverge: Nan" };
                     }
                     string xrstr = xr.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
                     error = Math.Abs((xr - xant) / xr);
@@ -158,6 +163,8 @@ namespace WinFormsApp1
                     {
                         xi = xr;
                         xant = xr;
+                        c += 1;
+
                     }
                 }
                 return new Error() { error_msg = "Se llego al limite de iteraciones" };
