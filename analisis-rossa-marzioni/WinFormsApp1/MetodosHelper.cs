@@ -194,7 +194,11 @@ namespace WinFormsApp1
                 xr = ((fxir * xd) - (fxdr * xi))/(fxir -fxdr);
                 if (double.IsInfinity(xr))
                 {
-                    return new Error() { error_msg = "Infinito" };
+                    return new Error() { error_msg = "Diverge: Infinito" };
+                }
+                if (double.IsNaN(xr))
+                {
+                    return new Error() { error_msg = "Diverge: Nan" };
                 }
                 error = Math.Abs((xr - xant) / xr);
                 Expression exr = new Expression($"f({xr.ToString(CultureInfo.CreateSpecificCulture("en-GB"))})", fu);
