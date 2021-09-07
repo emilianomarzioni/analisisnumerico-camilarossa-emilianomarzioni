@@ -29,39 +29,47 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.Funcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.xi = new System.Windows.Forms.TextBox();
+            this.xd = new System.Windows.Forms.TextBox();
+            this.ite = new System.Windows.Forms.TextBox();
+            this.tole = new System.Windows.Forms.TextBox();
+            this.metodosSelect = new System.Windows.Forms.ComboBox();
+            this.errorRelativo = new System.Windows.Forms.Label();
+            this.Xresult = new System.Windows.Forms.Label();
+            this.Iteraciones = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.convergelabel = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 97);
+            this.label1.Location = new System.Drawing.Point(89, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 15);
+            this.label1.Size = new System.Drawing.Size(39, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "F(x)";
+            this.label1.Text = "f(x) = ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Funcion
             // 
-            this.Funcion.Location = new System.Drawing.Point(187, 97);
+            this.Funcion.Location = new System.Drawing.Point(139, 87);
             this.Funcion.Name = "Funcion";
             this.Funcion.Size = new System.Drawing.Size(100, 23);
             this.Funcion.TabIndex = 1;
@@ -69,7 +77,7 @@ namespace WinFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(142, 137);
+            this.label2.Location = new System.Drawing.Point(89, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 15);
             this.label2.TabIndex = 2;
@@ -78,7 +86,7 @@ namespace WinFormsApp1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(142, 170);
+            this.label3.Location = new System.Drawing.Point(89, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 15);
             this.label3.TabIndex = 3;
@@ -87,7 +95,7 @@ namespace WinFormsApp1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(138, 206);
+            this.label4.Location = new System.Drawing.Point(64, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 4;
@@ -96,124 +104,212 @@ namespace WinFormsApp1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(138, 239);
+            this.label5.Location = new System.Drawing.Point(64, 232);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 15);
             this.label5.TabIndex = 5;
             this.label5.Text = "Tolerancia";
             // 
-            // textBox2
+            // xi
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(187, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 6;
+            this.xi.BackColor = System.Drawing.SystemColors.Window;
+            this.xi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xi.Location = new System.Drawing.Point(139, 128);
+            this.xi.Name = "xi";
+            this.xi.Size = new System.Drawing.Size(100, 23);
+            this.xi.TabIndex = 6;
             // 
-            // textBox3
+            // xd
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 7;
+            this.xd.Location = new System.Drawing.Point(139, 163);
+            this.xd.Name = "xd";
+            this.xd.Size = new System.Drawing.Size(100, 23);
+            this.xd.TabIndex = 7;
             // 
-            // textBox4
+            // ite
             // 
-            this.textBox4.Location = new System.Drawing.Point(213, 203);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 8;
+            this.ite.Location = new System.Drawing.Point(139, 196);
+            this.ite.Name = "ite";
+            this.ite.Size = new System.Drawing.Size(100, 23);
+            this.ite.TabIndex = 8;
             // 
-            // textBox5
+            // tole
             // 
-            this.textBox5.Location = new System.Drawing.Point(213, 239);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 9;
+            this.tole.Location = new System.Drawing.Point(139, 232);
+            this.tole.Name = "tole";
+            this.tole.Size = new System.Drawing.Size(100, 23);
+            this.tole.TabIndex = 9;
             // 
-            // comboBox1
+            // metodosSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(287, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 10;
+            this.metodosSelect.FormattingEnabled = true;
+            this.metodosSelect.Items.AddRange(new object[] {
+            "Biseccion",
+            "ReglaFalsa",
+            "NewtonRaphson",
+            "Secante"});
+            this.metodosSelect.Location = new System.Drawing.Point(257, 28);
+            this.metodosSelect.Name = "metodosSelect";
+            this.metodosSelect.Size = new System.Drawing.Size(121, 23);
+            this.metodosSelect.TabIndex = 10;
+            this.metodosSelect.SelectedValueChanged += new System.EventHandler(this.metodosSelect_SelectedValueChanged);
+            // 
+            // errorRelativo
+            // 
+            this.errorRelativo.AutoSize = true;
+            this.errorRelativo.Location = new System.Drawing.Point(427, 104);
+            this.errorRelativo.Name = "errorRelativo";
+            this.errorRelativo.Size = new System.Drawing.Size(12, 15);
+            this.errorRelativo.TabIndex = 11;
+            this.errorRelativo.Text = "-";
+            // 
+            // Xresult
+            // 
+            this.Xresult.AutoSize = true;
+            this.Xresult.Location = new System.Drawing.Point(427, 137);
+            this.Xresult.Name = "Xresult";
+            this.Xresult.Size = new System.Drawing.Size(12, 15);
+            this.Xresult.TabIndex = 12;
+            this.Xresult.Text = "-";
+            // 
+            // Iteraciones
+            // 
+            this.Iteraciones.AutoSize = true;
+            this.Iteraciones.Location = new System.Drawing.Point(427, 168);
+            this.Iteraciones.Name = "Iteraciones";
+            this.Iteraciones.Size = new System.Drawing.Size(12, 15);
+            this.Iteraciones.TabIndex = 13;
+            this.Iteraciones.Text = "-";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(56, 292);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(183, 32);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Calcular";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.calcularF_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(496, 85);
+            this.label6.Location = new System.Drawing.Point(280, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Método:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
+            // convergelabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(496, 118);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "label7";
+            this.convergelabel.AutoSize = true;
+            this.convergelabel.Location = new System.Drawing.Point(427, 205);
+            this.convergelabel.Name = "convergelabel";
+            this.convergelabel.Size = new System.Drawing.Size(12, 15);
+            this.convergelabel.TabIndex = 17;
+            this.convergelabel.Text = "-";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(653, 426);
+            this.tabControl1.TabIndex = 18;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.Funcion);
+            this.tabPage1.Controls.Add(this.convergelabel);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.Iteraciones);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.Xresult);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.errorRelativo);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.metodosSelect);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.xi);
+            this.tabPage1.Controls.Add(this.xd);
+            this.tabPage1.Controls.Add(this.tole);
+            this.tabPage1.Controls.Add(this.ite);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(645, 398);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Unidad 1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(496, 158);
+            this.label8.Location = new System.Drawing.Point(358, 168);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 15);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 15);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Iteraciones:\r\n";
             // 
-            // button1
+            // label7
             // 
-            this.button1.Location = new System.Drawing.Point(287, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Calcular";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(336, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Converge o no:";
             // 
-            // pictureBox1
+            // label9
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 449);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(400, 137);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 15);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "XR:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(344, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 15);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Error Relativo:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(645, 398);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Unidad 2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Funcion);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(667, 450);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Tolerancia";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -225,16 +321,24 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox xi;
+        private System.Windows.Forms.TextBox xd;
+        private System.Windows.Forms.TextBox ite;
+        private System.Windows.Forms.TextBox tole;
+        private System.Windows.Forms.ComboBox metodosSelect;
+        private System.Windows.Forms.Label errorRelativo;
+        private System.Windows.Forms.Label Xresult;
+        private System.Windows.Forms.Label Iteraciones;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label convergelabel;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
