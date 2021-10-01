@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Emiliano\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Emiliano\\.nuget\\packages"
+      "C:\\Users\\emarzioni.VIMARX\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\emarzioni.VIMARX\\.nuget\\packages",
+      "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages"
     ]
   }
 }
