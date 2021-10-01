@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A9+Ja71ErFghVsdnT1UrXtISzjd4TWSwsZTqVPTPAPvwHFPgV+MSJ0XZfrs/AkxIwaOyu7iOvpGUKk5dtevBxQ==",
+  "dgSpecHash": "WctTG8qzX2ntChCTGKLAoQx8y+XGqB+7rRJzu/zQVJuoNMP9kQ4Zluo43mx6gunmcXVDNnvJYi/0VGWG3H+3zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emiliano\\.nuget\\packages\\mathparser.org-mxparser\\4.4.2\\mathparser.org-mxparser.4.4.2.nupkg.sha512"
   ],

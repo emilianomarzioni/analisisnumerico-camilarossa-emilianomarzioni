@@ -210,7 +210,38 @@ namespace WinFormsApp1
             
         }
 
+        public static double[] GaussJordan(double[,] matriz, int dim)
+        {
+            for (int i = 0; i <= dim - 1; i++)
+            {
+                double coef = matriz[i, i];
+                for (int j = 0; j <= dim; j++)
+                {
+                    matriz[i, j] = matriz[i, j] / coef;
+                }
+                for (int j = 0; j <= dim - 1; j++)
+                {
+                    if (i != j)
+                    {
+                        coef = matriz[j, i];
+                        for (int k = 0; k <= dim; k++)
+                        {
+                            matriz[j, k] = matriz[j, k] - (coef * matriz[i, k]);
+                        }
+                    }
+                }
+            }
+
+            double[] resul = new double[dim];
+            for (int i = 0; i < dim; i++)
+            {
+                resul[i] = matriz[i, dim];
+            }
+            return resul;
+        }
+
     }
+
     public class Result
     {
         public string ErrorRelativo { get; set; }

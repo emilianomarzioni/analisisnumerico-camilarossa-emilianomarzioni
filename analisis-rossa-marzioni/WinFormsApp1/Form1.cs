@@ -105,5 +105,114 @@ namespace WinFormsApp1
                 xd.Enabled = true;
             }
         }
+        
+        private void matrizgenerator_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                panel1.Controls.Clear();
+                int txtno = int.Parse(matrizvalues.Text);
+                int pointX = 30;
+                int pointY = 30;
+
+                for (int i = 0; i < txtno; i++)
+                {
+                    for (int j = 0; j < txtno + 1; j++)
+                    {
+                        TextBox a = new TextBox();
+                        a.Name = $"txt{i}{j}";
+                        a.Location = new Point(pointX, pointY);
+                        a.AutoSize = false;
+                        a.Size = new Size(30, 20);
+                        if (j == txtno)
+                        {
+                            a.Name = $"txt{i}{j}";
+                            a.BackColor = Color.Yellow;
+                            int coef = i;
+                            switch (coef)
+                            {
+                                case 0:
+                                    Coeficiente var = Coeficiente.X;
+                                    a.Text = var.ToString();
+                                    break;
+                                case 1:
+                                    Coeficiente var1 = Coeficiente.Y;
+                                    a.Text = var1.ToString();
+                                    break;
+                                case 2:
+                                    Coeficiente var2 = Coeficiente.Z;
+                                    a.Text = var2.ToString();
+                                    break;
+                                case 3:
+                                    Coeficiente var3 = Coeficiente.W;
+                                    a.Text = var3.ToString();
+                                    break;
+                                case 4:
+                                    Coeficiente var4 = Coeficiente.V;
+                                    a.Text = var4.ToString();
+                                    break;
+                                case 5:
+                                    Coeficiente var5 = Coeficiente.U;
+                                    a.Text = var5.ToString();
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                        }
+                        a.Font = new Font("Microsoft Sans Serif", 10);
+                        panel1.Controls.Add(a);
+                        panel1.Show();
+                        pointX += 50;
+
+                    }
+
+                    pointY += 50;
+                    pointX = 30;
+                }
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Valor incorrecto", "Tamaño de matriz");
+            }
+        }
+        enum Coeficiente
+        {
+            X,
+            Y,
+            Z,
+            W,
+            V,
+            U
+        }
+
+        private void ExeSeidel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExeGauss_Click(object sender, EventArgs e)
+        {
+            int txtno = int.Parse(matrizvalues.Text);
+
+            var m = GenerarMatriz();
+            var x = MetodosHelper.GaussJordan(m, txtno);
+        }
+        private double[,] GenerarMatriz()
+        {
+            int txtno = int.Parse(matrizvalues.Text);
+
+            double[,] matriz = new double[txtno, txtno + 1];
+            for (int i = 0; i < txtno; i++)
+            {
+                for (int j = 0; j < txtno + 1; j++)
+                {
+                    Control tbx = panel1.Controls.Find($"txt{i}{j}", true).First();
+                    matriz[i, j] = double.Parse((tbx as TextBox).Text);
+                }
+            }
+            return matriz;
+        }
     }
 }

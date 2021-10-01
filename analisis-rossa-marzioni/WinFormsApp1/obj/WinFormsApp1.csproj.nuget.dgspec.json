@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\Emiliano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emiliano\\Desktop\\analisis\\analisis-rossa-marzioni\\WinFormsApp1\\obj\\",
+        "outputPath": "C:\\Users\\Emiliano\\Desktop\\analisisnumerico-camilarossa-emilianomarzioni\\analisis-rossa-marzioni\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emiliano\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -53,8 +53,14 @@ namespace WinFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ExeSeidel = new System.Windows.Forms.Button();
+            this.ExeGauss = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.matrizgenerator = new System.Windows.Forms.Button();
+            this.matrizvalues = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -289,6 +295,11 @@ namespace WinFormsApp1
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ExeSeidel);
+            this.tabPage2.Controls.Add(this.ExeGauss);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Controls.Add(this.matrizgenerator);
+            this.tabPage2.Controls.Add(this.matrizvalues);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -296,6 +307,50 @@ namespace WinFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ExeSeidel
+            // 
+            this.ExeSeidel.Location = new System.Drawing.Point(426, 24);
+            this.ExeSeidel.Name = "ExeSeidel";
+            this.ExeSeidel.Size = new System.Drawing.Size(103, 23);
+            this.ExeSeidel.TabIndex = 4;
+            this.ExeSeidel.Text = "Gauss-Jordan";
+            this.ExeSeidel.UseVisualStyleBackColor = true;
+            this.ExeSeidel.Click += new System.EventHandler(this.ExeSeidel_Click);
+            // 
+            // ExeGauss
+            // 
+            this.ExeGauss.Location = new System.Drawing.Point(294, 24);
+            this.ExeGauss.Name = "ExeGauss";
+            this.ExeGauss.Size = new System.Drawing.Size(103, 23);
+            this.ExeGauss.TabIndex = 3;
+            this.ExeGauss.Text = "Gauss-Jordan";
+            this.ExeGauss.UseVisualStyleBackColor = true;
+            this.ExeGauss.Click += new System.EventHandler(this.ExeGauss_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(23, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(599, 299);
+            this.panel1.TabIndex = 2;
+            // 
+            // matrizgenerator
+            // 
+            this.matrizgenerator.Location = new System.Drawing.Point(164, 24);
+            this.matrizgenerator.Name = "matrizgenerator";
+            this.matrizgenerator.Size = new System.Drawing.Size(80, 23);
+            this.matrizgenerator.TabIndex = 1;
+            this.matrizgenerator.Text = "Generar Matriz";
+            this.matrizgenerator.UseVisualStyleBackColor = true;
+            this.matrizgenerator.Click += new System.EventHandler(this.matrizgenerator_Click);
+            // 
+            // matrizvalues
+            // 
+            this.matrizvalues.Location = new System.Drawing.Point(44, 24);
+            this.matrizvalues.Name = "matrizvalues";
+            this.matrizvalues.Size = new System.Drawing.Size(100, 23);
+            this.matrizvalues.TabIndex = 0;
             // 
             // Form1
             // 
@@ -309,6 +364,8 @@ namespace WinFormsApp1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -339,6 +396,11 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button matrizgenerator;
+        private System.Windows.Forms.TextBox matrizvalues;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ExeSeidel;
+        private System.Windows.Forms.Button ExeGauss;
     }
 }
 
